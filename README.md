@@ -4,4 +4,8 @@
 
 ## Floating polulation
 - Data : [서울 생활이동 데이터(행정동)](https://data.seoul.go.kr/dataVisual/seoul/seoulLivingMigration.do)
-
+- Method
+```
+pydeck, dash, dash_deck
+```
+- Details
