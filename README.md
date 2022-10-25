@@ -34,7 +34,7 @@ if __name__ == "__main__":
 ![Untitled](https://user-images.githubusercontent.com/37128004/197697157-af91d349-ffa5-4e57-94ba-0f2743b4cb6c.png)
 
 ## Store location
-- Data : crawled data(버거킹, 스타벅스, 올리브영, 서브웨이, 네이버 맛집 Top100)
+- Data : crawled data(버거킹, 스타벅스, 올리브영, 서브웨이, 네이버 맛집 Top100의 위치)
 - Method 
 ```
 selenium, pydeck, dash, dash_deck, 
@@ -66,10 +66,42 @@ html.Div(
 ```
 ![Untitled](https://user-images.githubusercontent.com/37128004/197702797-50c86be4-314a-4602-b08b-51618141d24e.png)
 
-
-
-
-
+## Instagram text data
+### BarChartRace
+- Data : crawled data(22.07.09. ~ 22.08.26. 인스타그램 크롤링 데이터)
+- Method 
+```
+selenium, bar_chart_race, konlpy, PIL
+```
+- Details
+  - 핫플레이스 자체가 인스타로부터 파생되는 경우가 많음, 인스타의 게시글 크롤링(selenium)
+  - konlpy의 okt 형태소분석기로 명사 추출(okt.morphs)
+  - 날짜 별 통합, 각 날짜 당 top 50개의 단어만을 사용, 905개 단어 컬럼 생성(itertools & Counter)
+  - 날짜 별 각 column에 해당하는 단어 누적합(시간 순서)
+  - bar_chart_race 함수를 통한 그래프 그리기 
+  - **카페, 핫, 맛, 사진, 코스, 여행, 고기, 메뉴, 술집, 길** 순서로 나타남
+  - **사람들이 어떤 키워드를 가지고 핫플레이스나 글에 대한 정보를 올리는지** 간접적으로 알 수 있음 
+- Example code
+```
+bcr.bar_chart_race(df = main_df, 
+                   filename = "./insta_race.mp4", 
+                   orientation='h',
+                   n_bars = 10,
+                   fixed_max=True,
+                   steps_per_period=60,
+                   perpendicular_bar_func='median', 
+                   period_length=200,
+                   period_label={'x': .98, 'y': .3, 'ha': 'right', 'va': 'center'},
+                   shared_fontdict={'family' : 'NanumGothic', 'color' : 'white', 'weight' : 'bold', 'size' : 10},
+                   bar_size=.9,
+                   scale='linear',
+                   bar_kwargs={'alpha': .7},
+                   figsize=(12,8),
+                   filter_column_colors=True,
+                   fig=fig,
+                   sort='desc')
+```
+https://user-images.githubusercontent.com/37128004/197708285-e08df5c6-fde3-48a0-9b9c-b423d3d1ed28.mp4
 
 
 
