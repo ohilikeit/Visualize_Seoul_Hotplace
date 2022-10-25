@@ -114,6 +114,7 @@ selenium, konlpy, wordcloud
   - 게시글의 태그를 활용한 wordcloud 그리기
   - 불용어 제거 후 명사 추출
   - 서울시 지도 모양으로 그리기 
+  - **종로, 홍대, 신촌, 강남, 연남동, 인사동, 이태원**등 전통적인 핫플레이스들이 많이 보인다. 
 - Example code
 ```
 wordcloud = WordCloud(font_path=r".\NanumGothic.ttf",
