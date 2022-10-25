@@ -9,4 +9,8 @@
 pydeck, dash, dash_deck
 ```
 - Details
-  1. ㅇ
+  - **'사람이 많이 몰리는 곳이 핫플레이스이지 않을까?'** 에서 출발
+  - 2022년 1월에서 6월, 대상연월, 요일, 시간, 출발 및 도착 행정동 코드, 이동유형, 이동인구(합)
+  - 이동유형은 **집과 직장이 목적인 유형 제외한 경우** 사용 
+  - **pydeck으로 그린 layer를 interactive한 dash로 구현(dash_deck을 이용한 연동)** 
+  - year slider, button, dropdown 등등 구현 
