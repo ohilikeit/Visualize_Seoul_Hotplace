@@ -6,7 +6,7 @@
 - Data : [서울 생활이동 데이터(행정동)](https://data.seoul.go.kr/dataVisual/seoul/seoulLivingMigration.do), [서울시 행정동 경계파일](https://github.com/vuski/admdongkor/tree/master/ver20220401)
 - Method
 ```
-pydeck, dash, dash_deck
+pydeck(0.5.0), dash, dash_deck
 ```
 - Details
   - **'사람이 많이 몰리는 곳이 핫플레이스이지 않을까?'** 에서 출발
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 - Data : crawled data(버거킹, 스타벅스, 올리브영, 서브웨이, 네이버 맛집 Top100의 위치)
 - Method 
 ```
-selenium, pydeck, dash, dash_deck, 
+selenium, pydeck(0.5.0), dash, dash_deck, 
 ```
 - Details
   - ‘**스타벅스, 버거킹, 올리브영**이 모두 모여있으면 그 주변은 왠만하면 핫플이다.’에서 출발
