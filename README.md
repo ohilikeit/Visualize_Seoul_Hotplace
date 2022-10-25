@@ -3,7 +3,7 @@
 ***서울 시의 핫플레이스를 데이터로 확인해보고 그려보는 프로젝트이다.***
 
 ## Floating polulation
-- Data : [서울 생활이동 데이터(행정동)](https://data.seoul.go.kr/dataVisual/seoul/seoulLivingMigration.do)
+- Data : [서울 생활이동 데이터(행정동)](https://data.seoul.go.kr/dataVisual/seoul/seoulLivingMigration.do), [서울시 행정동 경계파일](https://github.com/vuski/admdongkor/tree/master/ver20220401)
 - Method
 ```
 pydeck, dash, dash_deck
