@@ -13,6 +13,24 @@ pydeck, dash, dash_deck
   - 이동유형은 **집과 직장이 목적인 유형 제외한 경우** 사용 
   - **pydeck으로 그린 layer를 interactive한 dash로 구현(dash_deck을 이용한 연동)** 
   - year slider, button, dropdown 등등 구현 
+
+- Example code
+```
+@app.callback(
+    Output(component_id = "deck-gl", component_property = "children"),
+    Input(component_id = "month_slider", component_property = "value"),
+    Input(component_id = "day_dropdown", component_property = "value"),
+    Input(component_id = "time_dropdown", component_property = "value"),
+    Input(component_id = "max_rows", component_property = "value")
+)
+def update_contents(month, day, time, top):
+    r = create_map(month, day, time, top)
+    return dash_deck.DeckGL(r.to_json(), id = 'deck_gl', tooltip=True, mapboxKey=r.mapbox_key)
+
+if __name__ == "__main__":
+    app.run_server(debug=True)
+```
+
 ![Untitled](https://user-images.githubusercontent.com/37128004/197697157-af91d349-ffa5-4e57-94ba-0f2743b4cb6c.png)
 
 ## Store location
