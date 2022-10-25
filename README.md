@@ -43,9 +43,9 @@ selenium, pydeck, dash, dash_deck,
   - ‘**스타벅스, 버거킹, 올리브영**이 모두 모여있으면 그 주변은 왠만하면 핫플이다.’에서 출발
   - 여기에 서브웨이, 네이버 맛집 Top100 가게 위치를 크롤링해와서 지도에 plotting 
   - icon layer를 활용하고 button을 체크해 원하는 가게를 함께 띄움
-  - checklist의 multi=True 옵션 오류로 인해 구현 불가, 새로고침해도 체크만 유지되고 지도에 반영되지 않음
-  - update button을 페이지 새로고침 기능으로 바꾸어 해결
-  - 이전과 비슷하게 강남, 신촌, 건대, 종로 등이 나타남 
+  - **checklist의 multi=True 옵션 오류로 인해 구현 불가**, 새로고침해도 체크만 유지되고 지도에 반영되지 않음
+  - **update button을 페이지 새로고침 기능으로 바꾸어 해결**
+  - 이전과 비슷하게 **강남, 신촌, 건대, 종로** 등이 나타남 
 - Example code
 ```
 html.Div(
