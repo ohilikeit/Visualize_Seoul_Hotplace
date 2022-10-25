@@ -103,22 +103,28 @@ bcr.bar_chart_race(df = main_df,
 ```
 https://user-images.githubusercontent.com/37128004/197708285-e08df5c6-fde3-48a0-9b9c-b423d3d1ed28.mp4
 
+### Hashtag Wordcloud
+- Data : crawled data(핫플 관련 keywords, 인스타그램 크롤링-tag)
+- Method
+```
+selenium, konlpy, wordcloud
+```
+- Details
+  - 게시글의 태그를 활용한 wordcloud 그리기
+  - 불용어 제거 후 명사 추출
+  - 서울시 지도 모양으로 그리기 
+- Example code
+```
+wordcloud = WordCloud(font_path=r".\NanumGothic.ttf",
+                      background_color='black', 
+                      max_font_size=200, 
+                      relative_scaling = 0.2,
+                      stopwords=set(stop_words['text']),
+                      mask=seoul_mask).generate(str(clean_tag))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.figure(figsize=(64, 36), dpi=600)
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+```
+![Untitled](https://user-images.githubusercontent.com/37128004/197709109-5b1f3c3e-e94b-41d5-8173-dc2b02b6202c.png)
